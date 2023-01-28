@@ -167,6 +167,7 @@ def buscarAliexpress(navegador):
             print("escrito descrição")
             file.write(f'''
             Descrição
+            \n
             {produto0.text}
             \n
             \n
@@ -174,6 +175,7 @@ def buscarAliexpress(navegador):
             \n
             \n
             {produto0.get_attribute('href')}''')
+
             file.close()
         abrirNavegador(produto0.get_attribute('href'), "down")
         indiceproduto += 1
